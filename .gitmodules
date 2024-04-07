@@ -1,0 +1,6 @@
+[submodule "libevdev"]
+	path = libevdev
+	url = https://gitlab.freedesktop.org/libevdev/libevdev
+[submodule "libinput"]
+	path = libinput
+	url = https://gitlab.freedesktop.org/libinput/libinput.git
