@@ -1,7 +1,7 @@
 /*
  * @Author: Meha555
  * @Date: 2024-04-07 16:45:33
- * @Description:实现了一个简单的evtest，需要打开一个/dev下的输入设备
+ * @Description:实现了一个简单的evtest，需要打开一个/dev/input下的输入设备
  */
 
 #include <errno.h>
@@ -160,7 +160,7 @@ int main(int argc, char** argv)
         fprintf(stderr, "Failed to init libevdev (%s)\n", strerror(-rc));
         goto out;
     }
-    // https://stackoverflow.com/questions/3529777/do-you-know-about-x-in-c-language-format-string
+    // 关于%#格式控制符：https://stackoverflow.com/questions/3529777/do-you-know-about-x-in-c-language-format-string
     printf("Input device ID: bus %#x vendor %#x product %#x\n",
         libevdev_get_id_bustype(dev),
         libevdev_get_id_vendor(dev),
